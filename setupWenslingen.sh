@@ -54,7 +54,8 @@ sudo apt-get install totem-mozilla icedax tagtool easytag id3tool lame nautilus-
 sudo apt-get install gstreamer0.10-fluendo-mp3 gstreamer0.10-gnonlin gstreamer0.10-plugins-bad-multiverse gstreamer0.10-plugins-bad gstreamer0.10-plugins-ugly totem-plugins-extra gstreamer-tools ubuntu-restricted-extras
 
 # Install support for archive formats
-sudo apt-get install unace rar unrar p7zip-rar p7zip sharutils uudeview mpack lha arj cabextract lzip lunzip
+sudo apt-get install unace rar unrar p7zip-rar p7zip sharutils uudeview mpack arj cabextract lzip lunzip
+sudo apt-get install lha
 
 # Apple iTunes compatibility codec
 sudo apt-get install libavcodec-extra-53
