@@ -93,8 +93,17 @@ sudo apt-get install ttf-mscorefonts-installer
 #sudo add-apt-repository ppa:otto-kesselgulasch/gimp
 #sudo apt-get update && sudo apt-get install gimp
 
+# Install R-Base
+sudo add-apt-repository ppa:marutter/rrutter
+sudo apt-get update sudo apt-get install r-base
+
+# Install menulibre
+sudo apt-get install menulibre
+
+
 # Cleanup
 #--------
 sudo apt-get autoremove
 sudo apt-get autoclean
 sudo apt-get clean
+
