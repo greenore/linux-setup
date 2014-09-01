@@ -47,6 +47,9 @@ sudo apt-get install icedtea-plugin
 # Install VLC Media Player
 sudo apt-get install vlc
 
+# Audacity
+sudo apt-get install audacity
+
 # Install additional codecs to run all sorts of media
 sudo apt-get install flashplugin-installer gsfonts-x11 libxine1-ffmpeg gxine mencoder mpeg2dec vorbis-tools id3v2 mpg321 mpg123 libflac++6
 sudo apt-get install ffmpeg gstreamer0.10-ffmpeg gstreamer0.10-sdl gstreamer-dbus-media-service 
