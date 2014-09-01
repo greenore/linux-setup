@@ -42,6 +42,11 @@ sudo apt-get install adobe-flashplugin
 # Install java for browser
 sudo apt-get install icedtea-plugin
 
+# Enable H.264 support for Firefox:
+sudo add-apt-repository ppa:mc3man/trusty-media
+sudo apt-get update
+sudo apt-get install gstreamer0.10-ffmpeg
+
 # Media
 #------
 # Install VLC Media Player
