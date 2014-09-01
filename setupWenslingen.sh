@@ -103,6 +103,12 @@ sudo apt-get install menulibre
 # Install latex
 sudo apt-get install texlive texlive-latex-extra
 
+# Install gparted
+sudo apt-get install gparted
+
+# Screenshot Tool
+sudo apt-get install shutter
+
 # Cleanup
 #--------
 sudo apt-get autoremove
