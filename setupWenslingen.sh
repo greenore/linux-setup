@@ -100,6 +100,8 @@ sudo apt-get update sudo apt-get install r-base
 # Install menulibre
 sudo apt-get install menulibre
 
+# Install latex
+sudo apt-get install texlive texlive-latex-extra
 
 # Cleanup
 #--------
