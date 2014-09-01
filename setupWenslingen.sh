@@ -66,7 +66,6 @@ sudo /usr/share/doc/libdvdread4/install-css.sh
 
 # Install Videoeditor (Openshot)
 sudo add-apt-repository ppa:openshot.developers/ppa
-sudo apt-get update
 sudo apt-get install openshot openshot-doc
 
 # Office
