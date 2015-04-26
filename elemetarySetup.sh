@@ -55,23 +55,6 @@ sudo apt-get install vlc
 # Audacity
 sudo apt-get install audacity
 
-# Install additional codecs to run all sorts of media
-sudo apt-get install flashplugin-installer gsfonts-x11 libxine1-ffmpeg gxine mencoder mpeg2dec vorbis-tools id3v2 mpg321 mpg123 libflac++6
-sudo apt-get install ffmpeg gstreamer0.10-ffmpeg gstreamer0.10-sdl gstreamer-dbus-media-service 
-sudo apt-get install totem-mozilla icedax tagtool easytag id3tool lame nautilus-script-audio-convert libmad0 libjpeg-progs flac faac faad sox ffmpeg2theora libmpeg2-4 uudeview flac libmpeg3-1 mpeg3-utils mpegdemux liba52-0.7.4-dev libquicktime2
-sudo apt-get install gstreamer0.10-fluendo-mp3 gstreamer0.10-gnonlin gstreamer0.10-plugins-bad-multiverse gstreamer0.10-plugins-bad gstreamer0.10-plugins-ugly totem-plugins-extra gstreamer-tools ubuntu-restricted-extras
-
-# Install support for archive formats
-sudo apt-get install unace rar unrar p7zip-rar p7zip sharutils uudeview mpack arj cabextract lzip lunzip
-sudo apt-get install lha
-
-# Apple iTunes compatibility codec
-sudo apt-get install libavcodec-extra-53
-
-# To enable DVD support
-sudo apt-get install libdvdread4
-sudo /usr/share/doc/libdvdread4/install-css.sh
-
 # Install Videoeditor (Openshot)
 sudo add-apt-repository ppa:openshot.developers/ppa
 sudo apt-get install openshot openshot-doc
@@ -101,10 +84,6 @@ sudo mv fr_FR /opt/kingsoft/wps-office/office6/dicts/
 # Installs Microsoft Core Fonts (Arial,Times New Roman and  many more)
 sudo apt-get install ttf-mscorefonts-installer
 
-## Install GIMP
-#sudo add-apt-repository ppa:otto-kesselgulasch/gimp
-#sudo apt-get update && sudo apt-get install gimp
-
 # Install R-Base
 sudo add-apt-repository ppa:marutter/rrutter
 sudo apt-get update sudo apt-get install r-base
@@ -118,8 +97,43 @@ sudo apt-get install texlive texlive-latex-extra
 # Install gparted
 sudo apt-get install gparted
 
-# Screenshot Tool
-sudo apt-get install shutter
+# Install Multimedia Codecs and Enable DVD Playback
+sudo apt-add-repository ppa:mc3man/trusty-media
+sudo apt-get update
+sudo apt-get install ubuntu-restricted-extras ffmpeg gstreamer0.10-plugins-ugly libavcodec-extra-54 libvdpau-va-gl1 libmad0 mpg321 gstreamer1.0-libav
+
+# Enable DVD Playback
+sudo /usr/share/doc/libdvdread4/install-css.s­h
+
+# Install VLC Media Player
+sudo apt-get install vlc
+
+# Install Plugin Flash Player and Pepper Flash
+sudo apt-get install flashplugin-installer pepperflashplugin-nonfree
+
+# Install JAVA
+sudo add-apt-repository -y ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java9-installer
+
+# Install Support for Archive Formats and Restricted Extras
+sudo apt-get unace rar unrar p7zip-rar p7zip sharutils uudeview mpack arj cabextract lzip lunzip
+
+# Install Graphic Editor
+sudo apt-get install gimp inkscape
+
+# Install Elementary Tweak
+sudo apt-add-repository ppa:mpstark/elementary-tweaks-daily
+sudo apt-get install elementary-tweak
+
+# Install Skype
+sudo apt-get install skype
+
+#For Laptop: Install TLP for Improve Battery Life and Reduce Overheating
+sudo add-apt-repository ppa:linrunner/tlp
+sudo apt-get update
+sudo apt-get install tlp tlp-rdw
+sudo tlp start
 
 # Cleanup
 #--------
