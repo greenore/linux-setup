@@ -86,7 +86,8 @@ sudo apt-get install ttf-mscorefonts-installer
 
 # Install R-Base
 sudo add-apt-repository ppa:marutter/rrutter
-sudo apt-get update sudo apt-get install r-base
+sudo apt-get update
+sudo apt-get install r-base
 
 # Install menulibre
 sudo apt-get install menulibre
