@@ -135,6 +135,11 @@ sudo apt-get update
 sudo apt-get install tlp tlp-rdw
 sudo tlp start
 
+# Virtualbox Guest Additions (for optimal interaction)
+# Go to the directory
+cd /media/<cd name>
+sudo sh ./autorun.sh
+
 # Cleanup
 #--------
 sudo apt-get autoremove
