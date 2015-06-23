@@ -19,45 +19,50 @@
 
 # System 
 #-------
-# Upgrade system
+# Add apt-fast
+sudo add-apt-repository ppa:saiarcot895/myppa
 sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get dist-upgrade
+sudo apt-get install apt-fast
+
+# Upgrade system
+sudo apt-fast update
+sudo apt-fast upgrade
+sudo apt-fast dist-upgrade
 
 # Install Elementary Tweaks
 sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
-sudo apt-get update && sudo apt-get install elementary-tweaks
+sudo apt-fast update && sudo apt-fast install elementary-tweaks
 
-# sudo apt-get install elementary-wallpaper-collection
-sudo apt-get install elementary-.*-theme elementary-.*-icons
+# sudo apt-fast install elementary-wallpaper-collection
+sudo apt-fast install elementary-.*-theme elementary-.*-icons
 
 # Internet
 #---------
 # Install Browser
-sudo apt-get firefox
+sudo apt-fast firefox
 
 # Install flash plugin
-sudo apt-get install adobe-flashplugin
+sudo apt-fast install adobe-flashplugin
 
 # Install java for browser
-sudo apt-get install icedtea-plugin
+sudo apt-fast install icedtea-plugin
 
 # Enable H.264 support for Firefox:
 sudo add-apt-repository ppa:mc3man/trusty-media
-sudo apt-get update
-sudo apt-get install gstreamer0.10-ffmpeg
+sudo apt-fast update
+sudo apt-fast install gstreamer0.10-ffmpeg
 
 # Media
 #------
 # Install VLC Media Player
-sudo apt-get install vlc
+sudo apt-fast install vlc
 
 # Audacity
-sudo apt-get install audacity
+sudo apt-fast install audacity
 
 # Install Videoeditor (Openshot)
 sudo add-apt-repository ppa:openshot.developers/ppa
-sudo apt-get install openshot openshot-doc
+sudo apt-fast install openshot openshot-doc
 
 # Office
 #-------
@@ -82,58 +87,58 @@ sudo mv de_DE /opt/kingsoft/wps-office/office6/dicts/
 sudo mv fr_FR /opt/kingsoft/wps-office/office6/dicts/
 
 # Installs Microsoft Core Fonts (Arial,Times New Roman and  many more)
-sudo apt-get install ttf-mscorefonts-installer
+sudo apt-fast install ttf-mscorefonts-installer
 
 # Install R-Base
 sudo add-apt-repository ppa:marutter/rrutter
-sudo apt-get update
-sudo apt-get install r-base
+sudo apt-fast update
+sudo apt-fast install r-base
 
 # Install menulibre
-sudo apt-get install menulibre
+sudo apt-fast install menulibre
 
 # Install latex
-sudo apt-get install texlive texlive-latex-extra
+sudo apt-fast install texlive texlive-latex-extra
 
 # Install gparted
-sudo apt-get install gparted
+sudo apt-fast install gparted
 
 # Install Multimedia Codecs and Enable DVD Playback
 sudo apt-add-repository ppa:mc3man/trusty-media
-sudo apt-get update
-sudo apt-get install ubuntu-restricted-extras ffmpeg gstreamer0.10-plugins-ugly libavcodec-extra-54 libvdpau-va-gl1 libmad0 mpg321 gstreamer1.0-libav
+sudo apt-fast update
+sudo apt-fast install ubuntu-restricted-extras ffmpeg gstreamer0.10-plugins-ugly libavcodec-extra-54 libvdpau-va-gl1 libmad0 mpg321 gstreamer1.0-libav
 
 # Enable DVD Playback
 sudo /usr/share/doc/libdvdread4/install-css.s­h
 
 # Install VLC Media Player
-sudo apt-get install vlc
+sudo apt-fast install vlc
 
 # Install Plugin Flash Player and Pepper Flash
-sudo apt-get install flashplugin-installer pepperflashplugin-nonfree
+sudo apt-fast install flashplugin-installer pepperflashplugin-nonfree
 
 # Install JAVA
 sudo add-apt-repository -y ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java9-installer
+sudo apt-fast update
+sudo apt-fast install oracle-java9-installer
 
 # Install Support for Archive Formats and Restricted Extras
-sudo apt-get unace rar unrar p7zip-rar p7zip sharutils uudeview mpack arj cabextract lzip lunzip
+sudo apt-fast unace rar unrar p7zip-rar p7zip sharutils uudeview mpack arj cabextract lzip lunzip
 
 # Install Graphic Editor
-sudo apt-get install gimp inkscape
+sudo apt-fast install gimp inkscape
 
 # Install Elementary Tweak
 sudo apt-add-repository ppa:mpstark/elementary-tweaks-daily
-sudo apt-get install elementary-tweak
+sudo apt-fast install elementary-tweak
 
 # Install Skype
-sudo apt-get install skype
+sudo apt-fast install skype
 
 #For Laptop: Install TLP for Improve Battery Life and Reduce Overheating
 sudo add-apt-repository ppa:linrunner/tlp
-sudo apt-get update
-sudo apt-get install tlp tlp-rdw
+sudo apt-fast update
+sudo apt-fast install tlp tlp-rdw
 sudo tlp start
 
 # Virtualbox Guest Additions (for optimal interaction)
@@ -143,7 +148,6 @@ sudo sh ./autorun.sh
 
 # Cleanup
 #--------
-sudo apt-get autoremove
-sudo apt-get autoclean
-sudo apt-get clean
-
+sudo apt-fast autoremove
+sudo apt-fast autoclean
+sudo apt-fast clean
