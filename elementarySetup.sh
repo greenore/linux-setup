@@ -89,16 +89,30 @@ sudo mv fr_FR /opt/kingsoft/wps-office/office6/dicts/
 # Installs Microsoft Core Fonts (Arial,Times New Roman and  many more)
 sudo apt-fast install ttf-mscorefonts-installer
 
+## Data Science
+#---------------
 # Install R-Base
 sudo add-apt-repository ppa:marutter/rrutter
 sudo apt-fast update
 sudo apt-fast install r-base
 
-# Install menulibre
-sudo apt-fast install menulibre
-
 # Install latex
 sudo apt-fast install texlive texlive-latex-extra
+
+# Brackets
+sudo add-apt-repository ppa:webupd8team/brackets
+sudo apt-fast update
+sudo apt-fast install brackets
+
+# Atom
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-fast update
+sudo apt-fast install atom
+
+## System Settings
+#-----------------
+# Install menulibre
+sudo apt-fast install menulibre
 
 # Install gparted
 sudo apt-fast install gparted
