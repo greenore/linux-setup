@@ -69,10 +69,10 @@ sudo apt-fast install openshot openshot-doc
 # Install WPS-Office
 mkdir ~/Downloads/wps-office
 cd ~/Downloads/wps-office
-wget -c http://37.247.55.101/a15/wps-office_9.1.0.4751~a15_i386.deb         # WPS-Office
-wget -c http://37.247.55.101/a15/wps-office-fonts_1.0_all.deb               # Fonts
-wget -c http://37.247.55.101/a15/wps-office-mui-de_9.1.0.4751~a15_all.deb   # German Language
-wget -c http://37.247.55.101/a15/wps-office-mui-fr_9.1.0.4751~a15_all.deb   # French Language
+wget -c http://kdl.cc.ksosoft.com/wps-community/download/a18/wps-office_9.1.0.4961~a18p1_amd64.deb     # WPS-Office
+wget -c http://kdl.cc.ksosoft.com/wps-community/download/a15/wps-office-fonts_1.0_all.deb              # Fonts
+wget -c http://kdl.cc.ksosoft.com/wps-community/download/a15/wps-office-mui-de_9.1.0.4751~a15_all.deb  # German Language
+wget -c http://kdl.cc.ksosoft.com/wps-community/download/a15/wps-office-mui-fr_9.1.0.4751~a15_all.deb  # French Language
 sudo dpkg -i wps-office*
 
 # Spell checker
