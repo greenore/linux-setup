@@ -122,12 +122,6 @@ sudo apt-add-repository ppa:mc3man/trusty-media
 sudo apt-fast update
 sudo apt-fast install ubuntu-restricted-extras ffmpeg gstreamer0.10-plugins-ugly libavcodec-extra-54 libvdpau-va-gl1 libmad0 mpg321 gstreamer1.0-libav
 
-# Enable DVD Playback
-sudo /usr/share/doc/libdvdread4/install-css.s­h
-
-# Install VLC Media Player
-sudo apt-fast install vlc
-
 # Install Plugin Flash Player and Pepper Flash
 sudo apt-fast install flashplugin-installer pepperflashplugin-nonfree
 
@@ -141,10 +135,6 @@ sudo apt-fast unace rar unrar p7zip-rar p7zip sharutils uudeview mpack arj cabex
 
 # Install Graphic Editor
 sudo apt-fast install gimp inkscape
-
-# Install Elementary Tweak
-sudo apt-add-repository ppa:mpstark/elementary-tweaks-daily
-sudo apt-fast install elementary-tweak
 
 # Install Skype
 sudo apt-fast install skype
