@@ -17,6 +17,9 @@
 #sudo cp "/usr/share/backgrounds/The Coast.jpg" /usr/share/backgrounds/Blueprint.jpg
 #sudo cp "/usr/share/backgrounds/Horseshoe Bend Sunset.jpg" /usr/share/backgrounds/Blueprint.jpg
 
+## Add SSH 
+# ssh-add /location_to_the_key_file/xxxxxx.pem
+
 # System 
 #-------
 # Add apt-fast
