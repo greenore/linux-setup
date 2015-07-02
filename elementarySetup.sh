@@ -39,6 +39,12 @@ sudo apt-fast update && sudo apt-fast install elementary-tweaks
 # sudo apt-fast install elementary-wallpaper-collection
 sudo apt-fast install elementary-.*-theme elementary-.*-icons
 
+## Virtualbox
+sudo apt-fast install virtualbox-guest-utils
+usermod -a -G vboxsf tim
+mkdir /home/tim/R
+ln -s /media/sf_R /home/tim/R
+
 # Internet
 #---------
 # Install Browser
