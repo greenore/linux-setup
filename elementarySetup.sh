@@ -39,11 +39,17 @@ sudo apt-fast update && sudo apt-fast install elementary-tweaks
 # sudo apt-fast install elementary-wallpaper-collection
 sudo apt-fast install elementary-.*-theme elementary-.*-icons
 
-## Virtualbox
+## Virtualbox Guest Additions (for optimal interaction)
 sudo apt-fast install virtualbox-guest-utils
 usermod -a -G vboxsf tim
+usermod -a -G vboxsf rstudio-server
 mkdir /home/tim/R
-ln -s /media/sf_R /home/tim/R
+ln -s /media/sf_R /home/tim
+# unlink /home/tim/sf_R
+
+## Configure Guests
+# Temporary
+ifconfig eth1 192.168.56.101 netmask 255.255.255.0 up
 
 # Internet
 #---------
@@ -153,11 +159,6 @@ sudo add-apt-repository ppa:linrunner/tlp
 sudo apt-fast update
 sudo apt-fast install tlp tlp-rdw
 sudo tlp start
-
-# Virtualbox Guest Additions (for optimal interaction)
-# Go to the directory
-cd /media/<cd name>
-sudo sh ./autorun.sh
 
 # Cleanup
 #--------
