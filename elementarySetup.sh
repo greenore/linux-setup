@@ -127,6 +127,9 @@ sudo apt-fast install libcurl4-openssl-dev
 # GEOS Dependencies
 sudo apt-fast install libgeos-dev
 
+# RODBC Dependencies
+sudo apt-fast install libiodbc2 libiodbc2-dev
+
 # R Dependencies
 sudo apt-fast install libxft-dev
 
