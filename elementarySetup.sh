@@ -121,8 +121,14 @@ sudo apt-fast install ttf-mscorefonts-installer
 
 ## Data Science
 #---------------
-# Dependencies
-sudo apt-fast install libcurl4-openssl-dev
+# Curl Dependencies
+sudo apt-fast install libcurl4-openssl-dev 
+
+# GEOS Dependencies
+sudo apt-fast install libgeos-dev
+
+# R Dependencies
+sudo apt-fast install libxft-dev
 
 # Install R-Base
 sudo add-apt-repository ppa:marutter/rrutter
