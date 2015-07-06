@@ -63,6 +63,9 @@ netmask 255.255.255.0
 network 192.168.56.0
 broadcast 192.168.56.255
 
+# Install ssh-server
+sudo apt-get install openssh-server
+
 # Internet
 #---------
 # Install Browser
