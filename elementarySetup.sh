@@ -129,6 +129,10 @@ sudo add-apt-repository ppa:marutter/rrutter
 sudo apt-fast update
 sudo apt-fast install r-base
 
+# RStudio Server
+sudo nano /etc/rstudio/rserver.conf
+rsession-which-r=/usr/lib64/RRO-3.2.0/R-3.2.0/bin/R
+
 # Install latex
 sudo apt-fast install texlive texlive-latex-extra
 
