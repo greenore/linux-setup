@@ -75,7 +75,7 @@ sudo apt-fast install texlive texlive-latex-extra
 # Install JAVA
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo apt-fast update
-sudo apt-fast install oracle-java9-installer
+sudo apt-fast install oracle-java8-installer
 
 # Cleanup
 #--------
