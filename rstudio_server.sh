@@ -72,7 +72,13 @@ rsession-which-r=/usr/lib64/RRO-3.2.0/R-3.2.0/bin/R
 # Install latex
 sudo apt-fast install texlive texlive-latex-extra
 
-# Install JAVA
+# Install OpenJDK
+sudo apt-fast install default-jdk
+
+## Maybe run the following R command
+R CMD javareconf
+
+# Install Oracle JAVA
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo apt-fast update
 sudo apt-fast install oracle-java8-installer
