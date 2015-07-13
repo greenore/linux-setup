@@ -20,9 +20,7 @@ mkdir /home/tim/R
 ln -s /media/sf_R /home/tim
 # unlink /home/tim/sf_R
 
-## Configure Guests
-
-# Permamently
+## Configure Virtual Guests
 sudo nano /etc/network/interfaces
 
 ## Add
