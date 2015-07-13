@@ -74,7 +74,7 @@ sudo apt-fast install texlive texlive-latex-extra
 sudo apt-fast install default-jdk
 
 ## Maybe run the following R command
-R CMD javareconf
+sudo R CMD javareconf
 
 # Install Oracle JAVA
 sudo add-apt-repository -y ppa:webupd8team/java
