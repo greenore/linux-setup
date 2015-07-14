@@ -82,6 +82,9 @@ sudo add-apt-repository -y ppa:webupd8team/java
 sudo apt-fast update
 sudo apt-fast install oracle-java8-installer
 
+# Swap file
+# see https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-14-04
+
 # Cleanup
 #--------
 sudo apt-fast autoremove
