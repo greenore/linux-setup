@@ -72,11 +72,17 @@ sudo nano /etc/samba/smb.conf
    force security mode = 777
    force directory security mode = 777
 
-sudo service smbd restart
+## Adduser
+#The first time you add a linux user (adduser) you need to add them to smbpasswd as well.
+sudo smbpasswd -a <user>
+# when prompted for a password use the same password you used with adduser. After this the smb password should be updated
+# automatically when you change the linux password with sudo passwd <user>
 
 ## Change folder permission
 sudo chmod -R 0755 /this/folder/is/shared
 sudo chown -R nobody:nogroup /this/folder/is/shared
+
+sudo service smbd restart
 
 # Cleanup
 #--------
