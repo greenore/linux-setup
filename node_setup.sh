@@ -73,6 +73,10 @@ sudo nano /etc/samba/smb.conf
 
 sudo service smbd restart
 
+## Change folder permission
+sudo chmod -R 0755 /this/folder/is/shared
+sudo chown -R nobody:nogroup /this/folder/is/shared
+
 # Cleanup
 #--------
 sudo apt-fast autoremove
