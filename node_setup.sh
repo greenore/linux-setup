@@ -84,6 +84,9 @@ sudo chown -R nobody:nogroup /this/folder/is/shared
 
 sudo service smbd restart
 
+## Git
+sudo apt-fast install git
+
 # Cleanup
 #--------
 sudo apt-fast autoremove
