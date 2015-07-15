@@ -71,6 +71,8 @@ sudo nano /etc/samba/smb.conf
    force security mode = 777
    force directory security mode = 777
 
+sudo service smbd restart
+
 # Cleanup
 #--------
 sudo apt-fast autoremove
