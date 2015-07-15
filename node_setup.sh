@@ -54,6 +54,23 @@ sudo apt-fast install npm
 ## If the link is missing execute Node.js
 sudo ln -s /usr/bin/nodejs /usr/local/bin/node
 
+## Samba File server
+sudo apt-fast install -y samba samba-common python-glade2 system-config-samba
+
+# Conf file
+sudo nano /etc/samba/smb.conf
+[node-shared]
+   path = /this/folder/is/shared
+   guest ok = yes
+   browseable = yes
+   read only = no
+   create mask = 0777
+   directory mask = 0777
+   force create mode = 777
+   force directory mode = 777
+   force security mode = 777
+   force directory security mode = 777
+
 # Cleanup
 #--------
 sudo apt-fast autoremove
