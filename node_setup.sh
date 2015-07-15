@@ -47,9 +47,12 @@ sudo apt-get install openssh-server
 # Installs Microsoft Core Fonts (Arial,Times New Roman and  many more)
 sudo apt-fast install ttf-mscorefonts-installer
 
-## Node.js
-sudo ln -s /usr/bin/nodejs /usr/local/bin/node
+## Install Node
+sudo apt-fast install nodejs
+sudo apt-fast install npm
 
+## If the link is missing execute Node.js
+sudo ln -s /usr/bin/nodejs /usr/local/bin/node
 
 # Cleanup
 #--------
