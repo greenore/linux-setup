@@ -55,6 +55,7 @@ sudo apt-fast install npm
 sudo ln -s /usr/bin/nodejs /usr/local/bin/node
 
 ## Samba File server
+# See https://www.liberiangeek.net/2014/07/ubuntu-tips-create-samba-file-server-ubuntu-14-04/ for more
 sudo apt-fast install -y samba samba-common python-glade2 system-config-samba
 
 # Conf file
