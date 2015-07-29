@@ -15,6 +15,9 @@ sudo apt-fast update
 sudo apt-fast upgrade
 sudo apt-fast dist-upgrade
 
+# Kernel upgrade (vivid is the 15.04 version...)
+sudo apt-get install --install-recommends linux-generic-lts-vivid
+
 ## Virtualbox Guest Additions (for optimal interaction)
 sudo apt-fast install virtualbox-guest-utils
 usermod -a -G vboxsf tim
