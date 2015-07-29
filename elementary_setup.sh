@@ -10,13 +10,6 @@
 #sudo update-alternatives --config x-terminal-emulator
 #and choose pantheon-terminal in the list.
 
-## Change Background
-#sudo cp /usr/share/backgrounds/Blueprint.jpg /usr/share/backgrounds/Backup_Blueprint.jpg
-#sudo cp /usr/share/backgrounds/Tunnel.jpg /usr/share/backgrounds/Blueprint.jpg
-#sudo cp /usr/share/backgrounds/Leaves.jpg /usr/share/backgrounds/Blueprint.jpg
-#sudo cp "/usr/share/backgrounds/The Coast.jpg" /usr/share/backgrounds/Blueprint.jpg
-#sudo cp "/usr/share/backgrounds/Horseshoe Bend Sunset.jpg" /usr/share/backgrounds/Blueprint.jpg
-
 ## Add SSH 
 # ssh-add /location_to_the_key_file/xxxxxx.pem
 
@@ -31,6 +24,9 @@ sudo apt-get install apt-fast
 sudo apt-fast update
 sudo apt-fast upgrade
 sudo apt-fast dist-upgrade
+
+# Kernel upgrade (vivid is the 15.04 version...)
+sudo apt-get install --install-recommends linux-generic-lts-vivid
 
 # Install Elementary Tweaks
 sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
