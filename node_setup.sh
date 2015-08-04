@@ -5,27 +5,6 @@
 
 # System 
 #-------
-# Add apt-fast
-sudo add-apt-repository ppa:saiarcot895/myppa
-sudo apt-get update
-sudo apt-get install apt-fast
-
-# Upgrade system
-sudo apt-fast update
-sudo apt-fast upgrade
-sudo apt-fast dist-upgrade
-
-# Kernel upgrade (vivid is the 15.04 version...)
-sudo apt-get install --install-recommends linux-generic-lts-vivid
-
-## Virtualbox Guest Additions (for optimal interaction)
-sudo apt-fast install virtualbox-guest-utils
-usermod -a -G vboxsf tim
-usermod -a -G vboxsf rstudio-server
-mkdir /home/tim/R
-ln -s /media/sf_R /home/tim
-# unlink /home/tim/sf_R
-
 ## Configure Guests
 sudo nano /etc/network/interfaces
 
@@ -44,6 +23,19 @@ broadcast 192.168.56.255
 # Guest IP: 192.168.56.101
 # Guest Port: 8787
 
+# Add apt-fast
+sudo add-apt-repository ppa:saiarcot895/myppa
+sudo apt-get update
+sudo apt-get install apt-fast
+
+# Upgrade system
+sudo apt-fast update
+sudo apt-fast upgrade
+sudo apt-fast dist-upgrade
+
+# Kernel upgrade (vivid is the 15.04 version...)
+sudo apt-get install --install-recommends linux-generic-lts-vivid
+
 # Install ssh-server
 sudo apt-get install openssh-server
 
@@ -56,6 +48,10 @@ sudo apt-fast install npm
 
 ## If the link is missing execute Node.js
 sudo ln -s /usr/bin/nodejs /usr/local/bin/node
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+
+## Install ionic & cordova
+sudo npm install -g cordova ionic
 
 ## Samba File server
 # See https://www.liberiangeek.net/2014/07/ubuntu-tips-create-samba-file-server-ubuntu-14-04/ for more
