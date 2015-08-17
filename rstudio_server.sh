@@ -35,6 +35,16 @@ netmask 255.255.255.0
 network 192.168.56.0
 broadcast 192.168.56.255
 
+## Configure WLAN
+auto wlan0
+iface wlan0 inet dhcp
+wireless-essid ***
+wireless-key ***
+
+sudo ifup -v wlan0
+
+
+
 # Set in virtualbox in the network settings the port forwarding
 # Host IP (leave emtpy):
 # Host Port: 8787
