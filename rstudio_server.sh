@@ -38,12 +38,10 @@ broadcast 192.168.56.255
 ## Configure WLAN
 auto wlan0
 iface wlan0 inet dhcp
-wireless-essid ***
-wireless-key ***
+       wpa-ssid network-name
+       wpa-psk pre-shared-key
 
 sudo ifup -v wlan0
-
-
 
 # Set in virtualbox in the network settings the port forwarding
 # Host IP (leave emtpy):
