@@ -27,7 +27,7 @@ ln -s /media/sf_R /home/tim
 sudo nano /etc/network/interfaces
 
 ## Add
-# The host-only network interface
+# The host-only network interface (Virtualbox)
 auto eth1
 iface eth1 inet static
 address 192.168.56.101
@@ -35,11 +35,13 @@ netmask 255.255.255.0
 network 192.168.56.0
 broadcast 192.168.56.255
 
-## Configure WLAN
+## Configure WLAN (Server)
 auto wlan0
 iface wlan0 inet dhcp
        wpa-ssid network-name
        wpa-psk pre-shared-key
+       wpa-ap-scan 1
+       wpa-scan-ssid 1
 
 sudo ifup -v wlan0
 
