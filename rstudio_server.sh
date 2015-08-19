@@ -88,7 +88,7 @@ sudo apt-fast install default-jdk
 
 ## Maybe run the following R command
 sudo R CMD javareconf
-sudo /usr/lib64/RRO-3.2.0/R-3.2.0/bin/R CMD javareconf
+sudo /usr/lib64/RRO-3.2.1/R-3.2.1/bin/R CMD javareconf
 
 # Install Oracle JAVA
 sudo add-apt-repository -y ppa:webupd8team/java
