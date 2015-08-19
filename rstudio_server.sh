@@ -95,8 +95,70 @@ sudo add-apt-repository -y ppa:webupd8team/java
 sudo apt-fast update
 sudo apt-fast install oracle-java8-installer
 
+## Samba File server
+# See https://www.liberiangeek.net/2014/07/ubuntu-tips-create-samba-file-server-ubuntu-14-04/ for more
+sudo apt-fast install -y samba samba-common python-glade2 system-config-samba
+
+# Conf file
+sudo nano /etc/samba/smb.conf
+[node-shared]
+   path = /this/folder/is/shared
+   guest ok = yes
+   browseable = yes
+   read only = no
+   create mask = 0777
+   directory mask = 0777
+   force create mode = 777
+   force directory mode = 777
+   force security mode = 777
+   force directory security mode = 777
+
+## Adduser
+#The first time you add a linux user (adduser) you need to add them to smbpasswd as well.
+sudo smbpasswd -a <user>
+# when prompted for a password use the same password you used with adduser. After this the smb password should be updated
+# automatically when you change the linux password with sudo passwd <user>
+
+## Change folder permission
+sudo chmod -R 0755 /this/folder/is/shared
+sudo chown -R nobody:nogroup /this/folder/is/shared
+
+sudo service smbd restart
+
+## Git
+sudo apt-fast install git
+
 # Swap file
 # see https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-14-04
+
+## NVIDIA
+#---------
+sudo apt-get install build-essential && sudo apt-get install linux-source && sudo apt-get install linux-headers-generic
+sudo nano /etc/default/grub #change line "GRUB_CMDLINE_LINUX_DEFAULT..."-line to
+GRUB_CMDLINE_LINUX_DEFAULT="nouveau.blacklist=1 quiet splash nomodeset" #(forces low-level graphics to ensure putty does not give black screen)
+sudo update-grub2
+sudo apt-get remove nvidia* && sudo apt-get autoremove #ensures no former installation clashes with new install
+sudo reboot
+
+# After reboot get correct nvidia-driver (chose graphic-card and OS) at “http://www.nvidia.com/Download/index.aspx?lang=en-us" (or search webb with “nvidia download”). Right-click on downloaded file and change if to executable.
+sudo nano /etc/modprobe.d/blacklist.conf #add these lines at the end:
+blacklist vga16fb
+blacklist nouveau
+blacklist rivafb
+blacklist nvidiafb
+blacklist rivatv
+blacklist lbm-nouveua
+options nouveau modeset=0
+alias nouveau off
+alias lbm-nouveau off
+
+sudo service lightdm stop #stops graphic session to enable nvidiainstallation
+cd Downloads #(or wherever you downloaded your nvidia-file)
+sudo ./{the downloadedfilename.run} #follow installation-instructions (normally yes to all)sudo nvidia-xconfig #(if you did not chose “yes” to this in the installation”
+sudo nano /etc/default/grub # change the "GRUB_CMBLINE_LINUX_DEFAULT..."-line to below:
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nomodeset"
+sudo update-grub2 # update grub!
+sudo reboot
 
 # Cleanup
 #--------
