@@ -27,7 +27,7 @@ ln -s /media/sf_R /home/tim
 #https://www.maketecheasier.com/move-home-folder-ubuntu/
 
 ## Encrypt /home folder after installation
-# http://www.howtogeek.com/116032/how-to-encrypt-your-home-folder-after-installing-ubuntu/
+# http://www.addictivetips.com/ubuntu-linux-tips/how-to-encrypt-ubuntu-home-folder-from-command-line-using-ecryptfs/
 
 ## Configure Virtual Guests
 sudo nano /etc/network/interfaces
