@@ -23,6 +23,9 @@ mkdir /home/tim/R
 ln -s /media/sf_R /home/tim
 # unlink /home/tim/sf_R
 
+## Mount home on external drive
+#https://www.maketecheasier.com/move-home-folder-ubuntu/
+
 ## Configure Virtual Guests
 sudo nano /etc/network/interfaces
 
