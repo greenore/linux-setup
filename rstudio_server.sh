@@ -24,10 +24,14 @@ ln -s /media/sf_R /home/tim
 # unlink /home/tim/sf_R
 
 ## Mount /home on external drive
-#https://www.maketecheasier.com/move-home-folder-ubuntu/
+# https://www.maketecheasier.com/move-home-folder-ubuntu/
 
 ## Encrypt /home folder after installation
 # http://www.addictivetips.com/ubuntu-linux-tips/how-to-encrypt-ubuntu-home-folder-from-command-line-using-ecryptfs/
+
+# Swap file
+# see https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-14-04
+# http://www.tldp.org/HOWTO/Partition/setting_up_swap.html
 
 ## Configure Virtual Guests
 sudo nano /etc/network/interfaces
@@ -133,9 +137,6 @@ sudo service smbd restart
 
 ## Git
 sudo apt-fast install git
-
-# Swap file
-# see https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-14-04
 
 ## NVIDIA
 #---------
