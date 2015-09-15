@@ -5,6 +5,7 @@
 # device; this may be used with UUID= as a more robust way to name devices
 # that works even if disks are added and removed. See fstab(5).
 #
+
 # <file system> <mount point>   <type>  <options>       <dump>  <pass>
 /dev/mapper/ada--vg-root /               ext4    errors=remount-ro 0       1
 
@@ -14,17 +15,9 @@ UUID=adac2ee5-8a8a-454e-8a4b-ee0489d56dd1 /boot           ext2    defaults      
 # /boot/efi was on /dev/sdb1 during installation
 UUID=89B9-12F8  /boot/efi       vfat    defaults        0       1
 
-## Mounting external HDD (4TB)
-#UUID=d9b71152-7635-4c77-9c81-a5ddb1e9b2aa /media/hdd   ext4    defaults        0       2
-
-## Mount Home directory on external HDD
+## Home directory on external HDD
 UUID=d9b71152-7635-4c77-9c81-a5ddb1e9b2aa   /home    ext4          nodev,nosuid       0       2
 
-## Swapping Swapping on HDD (512GB)
-#/dev/mapper/ada--vg-swap_1 none            swap    sw              0       0
-#/dev/mapper/cryptswap1 none swap sw 0 0
-/swapfile none swap defaults 0 0
-
-
-
-
+## Swapping Swapping on two files (Higher pri, means higher priority)
+/swapfile       none    swap    sw,pri=2        0       0
+/home/swapfile  none    swap    sw,pri=1        0       0
