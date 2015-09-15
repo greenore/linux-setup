@@ -1,0 +1,30 @@
+
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+/dev/mapper/ada--vg-root /               ext4    errors=remount-ro 0       1
+
+# /boot was on /dev/sdb2 during installation
+UUID=adac2ee5-8a8a-454e-8a4b-ee0489d56dd1 /boot           ext2    defaults        0       2
+
+# /boot/efi was on /dev/sdb1 during installation
+UUID=89B9-12F8  /boot/efi       vfat    defaults        0       1
+
+## Mounting external HDD (4TB)
+#UUID=d9b71152-7635-4c77-9c81-a5ddb1e9b2aa /media/hdd   ext4    defaults        0       2
+
+## Mount Home directory on external HDD
+UUID=d9b71152-7635-4c77-9c81-a5ddb1e9b2aa   /home    ext4          nodev,nosuid       0       2
+
+## Swapping Swapping on HDD (512GB)
+#/dev/mapper/ada--vg-swap_1 none            swap    sw              0       0
+#/dev/mapper/cryptswap1 none swap sw 0 0
+/swapfile none swap defaults 0 0
+
+
+
+
