@@ -56,7 +56,11 @@ sudo apt-fast install -y r-base
 sudo apt-fast install -y git
 
 ## Install apache Spark
-
+mkdir ~/Downloads
+cd ~/Downloads
+wget -c http://www.apache.org/dyn/closer.lua/spark/spark-1.5.1/spark-1.5.1.tgz
+tar -xvzf spark-1.5.1.tgz
+sudo dpkg -i wps-office*
 
 
 
