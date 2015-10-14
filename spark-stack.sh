@@ -36,31 +36,36 @@ sudo apt-fast install ttf-mscorefonts-installer
 ## Data Science
 #---------------
 # Curl Dependencies
-sudo apt-fast install libcurl4-openssl-dev 
+sudo apt-fast install -y libcurl4-openssl-dev 
 
 # GEOS Dependencies
-sudo apt-fast install libgeos-dev
+sudo apt-fast install -y libgeos-dev
 
 # RODBC Dependencies
-sudo apt-fast install libiodbc2 libiodbc2-dev
+sudo apt-fast install -y libiodbc2 libiodbc2-dev
 
 # R Dependencies
-sudo apt-fast install libxft-dev
+sudo apt-fast install -y libxft-dev
 
 # Install R-Base
 sudo add-apt-repository ppa:marutter/rrutter
-sudo apt-fast update
-sudo apt-fast install r-base
+sudo apt-fast update -y
+sudo apt-fast install -y r-base
 
 ## Git
-sudo apt-fast install git
+sudo apt-fast install -y git
 
-# RStudio Server
-sudo nano /etc/rstudio/rserver.conf
-rsession-which-r=/usr/lib64/RRO-3.2.0/R-3.2.0/bin/R
+## Install apache Spark
 
-# Install latex
-sudo apt-fast install texlive texlive-latex-extra
+
+
+
+
+
+
+
+
+
 
 # Install OpenJDK
 sudo apt-fast install default-jdk
