@@ -1,8 +1,5 @@
 #!/bin/bash
 
-## Add SSH 
-# ssh-add /location_to_the_key_file/xxxxxx.pem
-
 # System 
 #-------
 ## Configure Guests
@@ -33,25 +30,61 @@ sudo apt-fast update
 sudo apt-fast upgrade
 sudo apt-fast dist-upgrade
 
-# Kernel upgrade (vivid is the 15.04 version...)
-sudo apt-get install --install-recommends linux-generic-lts-vivid
-
-# Install ssh-server
-sudo apt-get install openssh-server
-
 # Installs Microsoft Core Fonts (Arial,Times New Roman and  many more)
 sudo apt-fast install ttf-mscorefonts-installer
 
-## Install Node
-sudo apt-fast install nodejs
-sudo apt-fast install npm
+## Data Science
+#---------------
+# Curl Dependencies
+sudo apt-fast install libcurl4-openssl-dev 
 
-## If the link is missing execute Node.js
-sudo ln -s /usr/bin/nodejs /usr/local/bin/node
-sudo ln -s /usr/bin/nodejs /usr/bin/node
+# GEOS Dependencies
+sudo apt-fast install libgeos-dev
 
-## Install ionic & cordova
-sudo npm install -g cordova ionic
+# RODBC Dependencies
+sudo apt-fast install libiodbc2 libiodbc2-dev
+
+# R Dependencies
+sudo apt-fast install libxft-dev
+
+# Install R-Base
+sudo add-apt-repository ppa:marutter/rrutter
+sudo apt-fast update
+sudo apt-fast install r-base
+
+## Git
+sudo apt-fast install git
+
+# RStudio Server
+sudo nano /etc/rstudio/rserver.conf
+rsession-which-r=/usr/lib64/RRO-3.2.0/R-3.2.0/bin/R
+
+# Install latex
+sudo apt-fast install texlive texlive-latex-extra
+
+# Install OpenJDK
+sudo apt-fast install default-jdk
+
+## Maybe run the following R command
+sudo R CMD javareconf
+sudo /usr/lib64/RRO-3.2.1/R-3.2.1/bin/R CMD javareconf
+
+# Install Oracle JAVA
+sudo add-apt-repository -y ppa:webupd8team/java
+sudo apt-fast update
+sudo apt-fast install oracle-java8-installer
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Samba File server
 # See https://www.liberiangeek.net/2014/07/ubuntu-tips-create-samba-file-server-ubuntu-14-04/ for more
@@ -82,9 +115,6 @@ sudo chmod -R 0755 /this/folder/is/shared
 sudo chown -R nobody:nogroup /this/folder/is/shared
 
 sudo service smbd restart
-
-## Git
-sudo apt-fast install git
 
 # Cleanup
 #--------
