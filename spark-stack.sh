@@ -55,10 +55,11 @@ sudo apt-fast install -y r-base
 ## Git
 sudo apt-fast install -y git
 
-# Install Oracle JAVA
-sudo add-apt-repository -y ppa:webupd8team/java
-sudo apt-fast update
-sudo apt-fast install oracle-java8-installer
+# Install JAVA
+sudo apt-fast install default-jdk
+#sudo add-apt-repository -y ppa:webupd8team/java
+#sudo apt-fast update
+#sudo apt-fast install oracle-java8-installer
 
 ## Maybe run the following R command
 sudo R CMD javareconf
@@ -67,7 +68,7 @@ sudo R CMD javareconf
 ## Install apache Spark
 mkdir ~/Downloads
 cd ~/Downloads
-wget -c http://mirror.switch.ch/mirror/apache/dist/spark/spark-1.5.1/spark-1.5.1.tgz
+wget -c http://mirror.switch.ch/mirror/apache/dist/spark/spark-1.5.1/spark-1.5.1-bin-hadoop2.6.tgz
 tar -xvzf spark-1.5.1.tgz
 
 # Navigate to the extracted folder and run one of the following command:
