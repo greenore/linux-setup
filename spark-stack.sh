@@ -23,15 +23,15 @@ broadcast 192.168.56.255
 # Add apt-fast
 sudo add-apt-repository ppa:saiarcot895/myppa
 sudo apt-get update
-sudo apt-get install apt-fast
+sudo apt-get install -y apt-fast
 
 # Upgrade system
 sudo apt-fast update
-sudo apt-fast upgrade
-sudo apt-fast dist-upgrade
+sudo apt-fast upgrade -y
+sudo apt-fast dist-upgrade -y
 
 # Installs Microsoft Core Fonts (Arial,Times New Roman and  many more)
-sudo apt-fast install ttf-mscorefonts-installer
+sudo apt-fast install -y ttf-mscorefonts-installer
 
 ## Data Science
 #---------------
