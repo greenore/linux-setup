@@ -18,7 +18,7 @@ broadcast 192.168.56.255
 # Host IP (leave emtpy):
 # Host Port: 8787
 # Guest IP: 192.168.56.101
-# Guest Port: 8787sudo
+# Guest Port: 8787
 
 # Add apt-fast
 sudo add-apt-repository ppa:saiarcot895/myppa
