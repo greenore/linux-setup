@@ -55,45 +55,24 @@ sudo apt-fast install -y r-base
 ## Git
 sudo apt-fast install -y git
 
-## Install apache Spark
-mkdir ~/Downloads
-cd ~/Downloads
-wget -c http://mirror.switch.ch/mirror/apache/dist/spark/spark-1.5.1/spark-1.5.1.tgz
-tar -xvzf spark-1.5.1.tgz
-sudo dpkg -i wps-office*
-
-
-
-
-
-
-
-
-
-
-# Install OpenJDK
-sudo apt-fast install default-jdk
-
-## Maybe run the following R command
-sudo R CMD javareconf
-sudo /usr/lib64/RRO-3.2.1/R-3.2.1/bin/R CMD javareconf
-
 # Install Oracle JAVA
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo apt-fast update
 sudo apt-fast install oracle-java8-installer
 
+## Maybe run the following R command
+sudo R CMD javareconf
+#sudo /usr/lib64/RRO-3.2.1/R-3.2.1/bin/R CMD javareconf
 
+## Install apache Spark
+mkdir ~/Downloads
+cd ~/Downloads
+wget -c http://mirror.switch.ch/mirror/apache/dist/spark/spark-1.5.1/spark-1.5.1.tgz
+tar -xvzf spark-1.5.1.tgz
 
-
-
-
-
-
-
-
-
-
+# Navigate to the extracted folder and run one of the following command:
+./bin/spark-shell     // for interactive scala shell
+./bin/pyspark         // for interactive python shell
 
 ## Samba File server
 # See https://www.liberiangeek.net/2014/07/ubuntu-tips-create-samba-file-server-ubuntu-14-04/ for more
