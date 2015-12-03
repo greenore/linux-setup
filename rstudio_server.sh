@@ -16,10 +16,8 @@ sudo apt-fast dist-upgrade
 sudo apt-get install openssh-server
 
 ## Adduser 
+sudo adduser <username>
 sudo adduser <username> sudo
-
-# Allow members of group sudo to execute any command
-%sudo   ALL=(ALL:ALL) ALL
 
 # Kernel upgrade (vivid is the 15.04 version...)
 sudo apt-get install --install-recommends linux-generic-lts-vivid
