@@ -12,6 +12,9 @@ sudo apt-fast update
 sudo apt-fast upgrade
 sudo apt-fast dist-upgrade
 
+# Install ssh-server
+sudo apt-get install openssh-server
+
 # Kernel upgrade (vivid is the 15.04 version...)
 sudo apt-get install --install-recommends linux-generic-lts-vivid
 
@@ -60,9 +63,6 @@ sudo ifup -v wlan0
 # Host Port: 8787
 # Guest IP: 192.168.56.101
 # Guest Port: 8787
-
-# Install ssh-server
-sudo apt-get install openssh-server
 
 # Installs Microsoft Core Fonts (Arial,Times New Roman and  many more)
 sudo apt-fast install ttf-mscorefonts-installer
