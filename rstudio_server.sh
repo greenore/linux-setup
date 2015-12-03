@@ -123,7 +123,7 @@ sudo apt-fast install -y samba samba-common python-glade2 system-config-samba
 # Conf file
 sudo nano /etc/samba/smb.conf
 [node-shared]
-   path = /this/folder/is/shared
+   path = /home
    guest ok = yes
    browseable = yes
    read only = no
@@ -141,8 +141,8 @@ sudo smbpasswd -a <user>
 # automatically when you change the linux password with sudo passwd <user>
 
 ## Change folder permission
-sudo chmod -R 0755 /this/folder/is/shared
-sudo chown -R nobody:nogroup /this/folder/is/shared
+sudo chmod -R 0755 /home
+#sudo chown -R nobody:nogroup /this/folder/is/shared
 
 sudo service smbd restart
 
