@@ -193,6 +193,32 @@ sudo apt-fast update
 sudo apt-fast install tlp tlp-rdw
 sudo tlp start
 
+# Backup
+#-------
+sudo add-apt-repository ppa:deja-dup-team/testing
+sudo apt-fast update
+sudo apt-fast install deja-dup
+
+# Adding Deja-dup support to Files
+# With Sudo Create dejadup-restore.contract in /usr/share/contractor
+
+[Contractor Entry]  
+Name=Restore missing files in folder  
+Icon=edit-find  
+Description=Restores missing files in folder using dejadup  
+MimeType=inode/directory  
+Exec=deja-dup --restore-missing %U  
+Gettext-Domain=deja-dup
+
+# Create dejadup-revert.contract
+[Contractor Entry]  
+Name=Revert to previous version...  
+Description=Revert to a previous version  
+Icon=edit-find  
+MimeType=application/octet-stream  
+Exec=deja-dup --restore %U  
+Gettext-Domain=deja-dup
+
 # Cleanup
 #--------
 sudo apt-fast autoremove
