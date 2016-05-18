@@ -71,7 +71,7 @@ sudo apt-get install openssh-server
 # Internet
 #---------
 # Install Browser
-sudo apt-fast firefox
+sudo apt-fast install firefox
 
 # Install flash plugin
 sudo apt-fast install adobe-flashplugin
