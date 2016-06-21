@@ -92,8 +92,8 @@ sudo apt-fast install r-base
 
 # RStudio Server
 sudo apt-get install gdebi-core
-wget https://download2.rstudio.org/rstudio-server-0.99.489-amd64.deb
-sudo gdebi rstudio-server-0.99.489-amd64.deb
+wget https://download2.rstudio.org/rstudio-server-0.99.902-amd64.deb
+sudo gdebi rstudio-server-0.99.902-amd64.deb
 
 sudo nano /etc/rstudio/rserver.conf
 rsession-which-r=/usr/lib64/RRO-3.2.0/R-3.2.0/bin/R
