@@ -8,12 +8,12 @@ sudo apt-get update
 sudo apt-get install apt-fast
 
 # Upgrade system
-sudo apt-fast update
-sudo apt-fast upgrade
-sudo apt-fast dist-upgrade
+sudo apt-fast update -y
+sudo apt-fast upgrade -y
+sudo apt-fast dist-upgrade -y
 
 # Install ssh-server
-sudo apt-get install openssh-server
+sudo apt-get install openssh-server -y
 
 ## Adduser 
 sudo adduser <username>
@@ -69,30 +69,31 @@ sudo ifup -v wlan0
 # Guest Port: 8787
 
 # Installs Microsoft Core Fonts (Arial,Times New Roman and  many more)
-sudo apt-fast install ttf-mscorefonts-installer
+sudo apt-fast install ttf-mscorefonts-installer -y
 
 ## Data Science
 #---------------
 # Curl Dependencies
-sudo apt-fast install libcurl4-openssl-dev 
+sudo apt-fast install libcurl4-openssl-dev  -y
 
 # GEOS Dependencies
-sudo apt-fast install libgeos-dev
+sudo apt-fast install libgeos-dev -y
 
 # RODBC Dependencies
-sudo apt-fast install libiodbc2 libiodbc2-dev
+sudo apt-fast install libiodbc2 libiodbc2-dev -y
 
 # R Dependencies
-sudo apt-fast install libxft-dev
+sudo apt-fast install libxft-dev -y
 
 # Install R-Base
-sudo add-apt-repository ppa:marutter/rrutter
-sudo apt-fast update
-sudo apt-fast install r-base
+sudo add-apt-repository ppa:marutter/rrutter -y
+sudo apt-fast update -y
+sudo apt-fast install r-base -y
 
 # RStudio Server
-sudo apt-get install gdebi-core
-wget https://download2.rstudio.org/rstudio-server-0.99.902-amd64.deb
+sudo apt-get install gdebi-core -y
+# wget https://download2.rstudio.org/rstudio-server-0.99.902-amd64.deb
+https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-server-0.99.1249-amd64.deb
 sudo gdebi rstudio-server-0.99.902-amd64.deb
 
 sudo nano /etc/rstudio/rserver.conf
