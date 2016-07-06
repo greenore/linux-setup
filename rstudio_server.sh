@@ -93,20 +93,20 @@ sudo apt-fast install r-base -y
 # RStudio Server
 sudo apt-get install gdebi-core -y
 # wget https://download2.rstudio.org/rstudio-server-0.99.902-amd64.deb
-https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-server-0.99.1249-amd64.deb
-sudo gdebi rstudio-server-0.99.902-amd64.deb
+wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-server-0.99.1249-amd64.deb
+sudo gdebi rstudio-server-0.99.1249-amd64.deb -y
 
 sudo nano /etc/rstudio/rserver.conf
 rsession-which-r=/usr/lib64/RRO-3.2.0/R-3.2.0/bin/R
 
 ## Install system management
-sudo apt-fast install -y htop
+sudo apt-fast install htop -y
 
 # Install latex
-sudo apt-fast install texlive texlive-latex-extra
+sudo apt-fast install texlive texlive-latex-extra -y
 
 # Install OpenJDK
-sudo apt-fast install default-jdk
+sudo apt-fast install default-jdk -y
 
 ## Maybe run the following R command
 sudo R CMD javareconf
@@ -148,7 +148,7 @@ sudo chmod -R 0755 /home
 sudo service smbd restart
 
 ## Git
-sudo apt-fast install git
+sudo apt-fast install git -y
 
 ## NVIDIA
 #---------
@@ -181,6 +181,6 @@ sudo reboot
 
 # Cleanup
 #--------
-sudo apt-fast autoremove
-sudo apt-fast autoclean
-sudo apt-fast clean
+sudo apt-fast autoremove -y
+sudo apt-fast autoclean -y
+sudo apt-fast clean -y
