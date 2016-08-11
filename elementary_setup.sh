@@ -92,6 +92,7 @@ sudo apt-fast install vlc
 # Silverlight Installation
 sudo add-apt-repository ppa:pipelight/stable
 sudo apt-fast update && sudo apt-get install pipelight-multi
+sudo pipelight-plugin --enable silverlight
 
 # Audacity
 sudo apt-fast install audacity
