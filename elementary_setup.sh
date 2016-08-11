@@ -89,6 +89,10 @@ sudo apt-fast install gstreamer0.10-ffmpeg
 # Install VLC Media Player
 sudo apt-fast install vlc
 
+# Silverlight Installation
+sudo add-apt-repository ppa:pipelight/stable
+sudo apt-fast update && sudo apt-get install pipelight-multi
+
 # Audacity
 sudo apt-fast install audacity
 
