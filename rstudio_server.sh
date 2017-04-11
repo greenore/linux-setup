@@ -36,6 +36,7 @@ sudo apt install libxft-dev -y
 mkdir downloads
 cd downloads
 wget https://mran.microsoft.com/install/mro/3.3.3/microsoft-r-open-3.3.3.tar.gz
+tar -xf microsoft-r-open-3.3.3.tar.gz
 cd microsoft-r-open/
 sudo ./install.sh -a -u
 
