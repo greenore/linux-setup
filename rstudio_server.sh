@@ -16,7 +16,7 @@ sudo apt install openssh-server -y
 
 # Installs Microsoft Core Fonts (Arial,Times New Roman and  many more)
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
-sudo apt-get install ttf-mscorefonts-installer -y
+sudo apt install ttf-mscorefonts-installer -y
 
 ## Data Science
 #---------------
