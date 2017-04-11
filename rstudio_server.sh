@@ -2,28 +2,23 @@
 
 # System 
 #-------
-# Add apt-fast
-sudo add-apt-repository ppa:saiarcot895/myppa
-sudo apt-get update
-sudo apt-get install apt-fast
-
 # Upgrade system
-sudo apt-fast update -y
-sudo apt-fast upgrade -y
-sudo apt-fast dist-upgrade -y
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt dist-upgrade -y
 
 # Install ssh-server
-sudo apt-get install openssh-server -y
+sudo apt install openssh-server -y
 
 ## Adduser 
 sudo adduser <username>
 sudo adduser <username> sudo
 
 # Kernel upgrade (vivid is the 15.04 version...)
-sudo apt-get install --install-recommends linux-generic-lts-vivid
+sudo apt install --install-recommends linux-generic-lts-vivid
 
 ## Virtualbox Guest Additions (for optimal interaction)
-sudo apt-fast install virtualbox-guest-utils
+sudo apt install virtualbox-guest-utils
 usermod -a -G vboxsf tim
 usermod -a -G vboxsf rstudio-server
 mkdir /home/tim/R
@@ -69,29 +64,29 @@ sudo ifup -v wlan0
 # Guest Port: 8787
 
 # Installs Microsoft Core Fonts (Arial,Times New Roman and  many more)
-sudo apt-fast install ttf-mscorefonts-installer -y
+sudo apt install ttf-mscorefonts-installer -y
 
 ## Data Science
 #---------------
 # Curl Dependencies
-sudo apt-fast install libcurl4-openssl-dev  -y
+sudo apt install libcurl4-openssl-dev  -y
 
 # GEOS Dependencies
-sudo apt-fast install libgeos-dev -y
+sudo apt install libgeos-dev -y
 
 # RODBC Dependencies
-sudo apt-fast install libiodbc2 libiodbc2-dev -y
+sudo apt install libiodbc2 libiodbc2-dev -y
 
 # R Dependencies
-sudo apt-fast install libxft-dev -y
+sudo apt install libxft-dev -y
 
 # Install R-Base
 sudo add-apt-repository ppa:marutter/rrutter -y
-sudo apt-fast update -y
-sudo apt-fast install r-base -y
+sudo apt update -y
+sudo apt install r-base -y
 
 # RStudio Server
-sudo apt-get install gdebi-core -y
+sudo apt install gdebi-core -y
 # wget https://download2.rstudio.org/rstudio-server-0.99.902-amd64.deb
 wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-server-0.99.1249-amd64.deb
 sudo gdebi rstudio-server-0.99.1249-amd64.deb -y
@@ -100,13 +95,13 @@ sudo nano /etc/rstudio/rserver.conf
 rsession-which-r=/usr/lib64/RRO-3.2.0/R-3.2.0/bin/R
 
 ## Install system management
-sudo apt-fast install htop -y
+sudo apt install htop -y
 
 # Install latex
-sudo apt-fast install texlive texlive-latex-extra -y
+sudo apt install texlive texlive-latex-extra -y
 
 # Install OpenJDK
-sudo apt-fast install default-jdk -y
+sudo apt install default-jdk -y
 
 ## Maybe run the following R command
 sudo R CMD javareconf
@@ -114,12 +109,12 @@ sudo /usr/lib64/RRO-3.2.1/R-3.2.1/bin/R CMD javareconf
 
 # Install Oracle JAVA
 sudo add-apt-repository -y ppa:webupd8team/java
-sudo apt-fast update
-sudo apt-fast install oracle-java8-installer
+sudo apt update
+sudo apt install oracle-java8-installer
 
 ## Samba File server
 # See https://www.liberiangeek.net/2014/07/ubuntu-tips-create-samba-file-server-ubuntu-14-04/ for more
-sudo apt-fast install -y samba samba-common python-glade2 system-config-samba
+sudo apt install -y samba samba-common python-glade2 system-config-samba
 
 # Conf file
 sudo nano /etc/samba/smb.conf
@@ -148,15 +143,15 @@ sudo chmod -R 0755 /home
 sudo service smbd restart
 
 ## Git
-sudo apt-fast install git -y
+sudo apt install git -y
 
 ## NVIDIA
 #---------
-sudo apt-get install build-essential && sudo apt-get install linux-source && sudo apt-get install linux-headers-generic
+sudo apt install build-essential && sudo apt install linux-source && sudo apt install linux-headers-generic
 sudo nano /etc/default/grub #change line "GRUB_CMDLINE_LINUX_DEFAULT..."-line to
 GRUB_CMDLINE_LINUX_DEFAULT="nouveau.blacklist=1 quiet splash nomodeset" #(forces low-level graphics to ensure putty does not give black screen)
 sudo update-grub2
-sudo apt-get remove nvidia* && sudo apt-get autoremove #ensures no former installation clashes with new install
+sudo apt remove nvidia* && sudo apt autoremove #ensures no former installation clashes with new install
 sudo reboot
 
 # After reboot get correct nvidia-driver (chose graphic-card and OS) at “http://www.nvidia.com/Download/index.aspx?lang=en-us" (or search webb with “nvidia download”). Right-click on downloaded file and change if to executable.
@@ -181,6 +176,6 @@ sudo reboot
 
 # Cleanup
 #--------
-sudo apt-fast autoremove -y
-sudo apt-fast autoclean -y
-sudo apt-fast clean -y
+sudo apt autoremove -y
+sudo apt autoclean -y
+sudo apt clean -y
