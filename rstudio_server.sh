@@ -40,12 +40,6 @@ tar -xf microsoft-r-open-3.3.3.tar.gz
 cd microsoft-r-open/
 sudo ./install.sh -a -u
 
-# RStudio Server
-sudo apt-get install gdebi-core -y
-cd ..
-wget https://download2.rstudio.org/rstudio-server-1.0.136-amd64.deb
-sudo gdebi rstudio-server-1.0.136-amd64.deb -y
-
 ## Install system management
 sudo apt install htop -y
 
@@ -66,3 +60,9 @@ sudo apt install git -y
 sudo apt autoremove -y
 sudo apt autoclean -y
 sudo apt clean -y
+
+# RStudio Server
+sudo apt-get install gdebi-core -y
+cd ..
+wget https://download2.rstudio.org/rstudio-server-1.0.136-amd64.deb
+# sudo gdebi rstudio-server-1.0.136-amd64.deb
