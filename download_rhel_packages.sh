@@ -1,26 +1,28 @@
 #!/bin/bash
-# Script for an offline installation of R on a redhat environment.
+## User the following commands to download this script
 
-# System 
-#-------
-## Add repository
+## Mkdir
+# mkdir downloads
+# cd downloads
+# sudo yum update -y
+# sudo yum install wget -y
+# wget https://raw.githubusercontent.com/greenore/linux-setup/master/download_rhel_packages.sh
+# chmod +x download_rhel_packages.sh
+# sudo ./download_rhel_packages.sh
+
+## Add necessary repository
 sudo su
 su -c 'rpm -Uvh http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm'
 exit
 
 ## Upgrade system
 sudo yum update -y
-#sudo yum upgrade -y
-
-## Mkdir
-mkdir downloads
-cd downloads
+sudo yum upgrade -y
 
 ## Install system stuff
 sudo yum install --downloadonly --downloaddir ./ htop -y
 sudo yum install --downloadonly --downloaddir ./ nano -y
 sudo yum install --downloadonly --downloaddir ./ screen -y
-sudo yum install --downloadonly --downloaddir ./ wget -y
 sudo yum install --downloadonly --downloaddir ./ git -y
 
 ## Install R dependencies
