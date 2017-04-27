@@ -22,13 +22,14 @@ sudo yum install --downloadonly --downloaddir ./ nano -y
 sudo yum install --downloadonly --downloaddir ./ screen -y
 sudo yum install --downloadonly --downloaddir ./ wget -y
 sudo yum install --downloadonly --downloaddir ./ git -y
+sudo yum install --downloadonly --downloaddir ./ zip -y
+sudo yum install --downloadonly --downloaddir ./ unzip -y
 sudo yum localinstall * -y
 
 ## Install R dependencies
 # Stringi
 sudo yum install --downloadonly --downloaddir ./ libicu-devel -y
 sudo yum localinstall * -y
-
 
 # Curl
 sudo yum install --downloadonly --downloaddir ./ libcurl-devel -y
@@ -40,6 +41,11 @@ sudo yum localinstall * -y
 
 # SSL
 sudo yum install --downloadonly --downloaddir ./ openssl-devel -y
+sudo yum localinstall * -y
+
+# Geos
+wget ftp://rpmfind.net/linux/epel/7/x86_64/g/geos-devel-3.4.2-2.el7.x86_64.rpm
+wget ftp://rpmfind.net/linux/epel/7/x86_64/g/geos-3.4.2-2.el7.x86_64.rpm
 sudo yum localinstall * -y
 
 # Texlive
