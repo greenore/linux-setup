@@ -25,6 +25,11 @@ sudo yum install --downloadonly --downloaddir ./ git -y
 sudo yum localinstall * -y
 
 ## Install R dependencies
+# Stringi
+sudo yum install --downloadonly --downloaddir ./ libicu-devel -y
+sudo yum localinstall * -y
+
+
 # Curl
 sudo yum install --downloadonly --downloaddir ./ libcurl-devel -y
 sudo yum localinstall * -y
@@ -54,7 +59,6 @@ sudo yum localinstall * -y
 sudo wget ftp://195.220.108.108/linux/centos/7.3.1611/os/x86_64/Packages/texlive-framed-svn26789.0.96-38.el7.noarch.rpm
 sudo wget ftp://195.220.108.108/linux/centos/7.3.1611/os/x86_64/Packages/texlive-titling-svn15878.2.1d-38.el7.noarch.rpm
 sudo yum localinstall * -y
-
 
 # Texinfo
 sudo wget http://mirror.centos.org/centos/7/os/x86_64/Packages/texinfo-tex-5.1-4.el7.x86_64.rpm
