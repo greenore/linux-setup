@@ -26,28 +26,6 @@ sudo yum install --downloadonly --downloaddir ./ zip -y
 sudo yum install --downloadonly --downloaddir ./ unzip -y
 sudo yum localinstall * -y
 
-## Install R dependencies
-# Stringi
-sudo yum install --downloadonly --downloaddir ./ libicu-devel -y
-sudo yum localinstall * -y
-
-# Curl
-sudo yum install --downloadonly --downloaddir ./ libcurl-devel -y
-sudo yum localinstall * -y
-
-# XML
-sudo yum install --downloadonly --downloaddir ./ libxml2-devel -y
-sudo yum localinstall * -y
-
-# SSL
-sudo yum install --downloadonly --downloaddir ./ openssl-devel -y
-sudo yum localinstall * -y
-
-# Geos
-wget ftp://rpmfind.net/linux/epel/7/x86_64/g/geos-devel-3.4.2-2.el7.x86_64.rpm
-wget ftp://rpmfind.net/linux/epel/7/x86_64/g/geos-3.4.2-2.el7.x86_64.rpm
-sudo yum localinstall * -y
-
 # Texlive
 #sudo yum install --downloadonly --downloaddir ./ perl-Digest-MD5 -y
 #sudo yum localinstall * -y
@@ -82,14 +60,36 @@ sudo yum install --downloadonly --downloaddir ./ R -y
 sudo yum localinstall * -y
 
 ## Microsoft R Open
-#sudo wget https://mran.microsoft.com/install/mro/3.3.3/microsoft-r-open-3.3.3.tar.gz
-#tar -xf microsoft-r-open-3.3.3.tar.gz
-#cd microsoft-r-open/
-#sudo ./install.sh
+sudo wget https://mran.microsoft.com/install/mro/3.3.3/microsoft-r-open-3.3.3.tar.gz
+tar -xf microsoft-r-open-3.3.3.tar.gz
+cd microsoft-r-open/
+sudo ./install.sh
 
 # Maybe run the following R command
 sudo R CMD javareconf
-#sudo /usr/lib64/microsoft-r/3.3/lib64/R/bin/R CMD javareconf
+sudo /usr/lib64/microsoft-r/3.3/lib64/R/bin/R CMD javareconf
+
+## Install R dependencies
+# Stringi
+sudo yum install --downloadonly --downloaddir ./ libicu-devel -y
+sudo yum localinstall * -y
+
+# Curl
+sudo yum install --downloadonly --downloaddir ./ libcurl-devel -y
+sudo yum localinstall * -y
+
+# XML
+sudo yum install --downloadonly --downloaddir ./ libxml2-devel -y
+sudo yum localinstall * -y
+
+# SSL
+sudo yum install --downloadonly --downloaddir ./ openssl-devel -y
+sudo yum localinstall * -y
+
+# Geos
+wget ftp://rpmfind.net/linux/epel/7/x86_64/g/geos-devel-3.4.2-2.el7.x86_64.rpm
+wget ftp://rpmfind.net/linux/epel/7/x86_64/g/geos-3.4.2-2.el7.x86_64.rpm
+sudo yum localinstall * -y
 
 # Rstudio dependencies
 sudo yum install --downloadonly --downloaddir ./ psmisc -y
@@ -99,12 +99,12 @@ sudo yum localinstall * -y
 wget https://download2.rstudio.org/rstudio-server-rhel-1.0.143-x86_64.rpm
 sudo yum install --nogpgcheck rstudio-server-rhel-1.0.143-x86_64.rpm -y
 
-#sudo nano /etc/rstudio/rserver.conf
-#rsession-which-r=/usr/lib64/microsoft-r/3.3/lib64/R/bin/R
-#sudo rstudio-server restart
+sudo nano /etc/rstudio/rserver.conf
+rsession-which-r=/usr/lib64/microsoft-r/3.3/lib64/R/bin/R
+sudo rstudio-server restart
 
 ## Enable Swapping
-sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=2048
+sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=4096
 sudo /sbin/mkswap /var/swap.1
 sudo chmod 600 /var/swap.1
 sudo /sbin/swapon /var/swap.1
@@ -116,3 +116,11 @@ sudo yum autoremove -y
 ## User add
 sudo useradd tim
 sudo passwd tim
+
+wget http://ab-initio.mit.edu/nlopt/nlopt-2.4.2.tar.gz
+tar -xf nlopt-2.4.2.tar.gz
+cd nlopt-2.4.2
+./configure --enable-shared
+make
+make install
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
