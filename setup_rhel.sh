@@ -89,6 +89,7 @@ sudo yum localinstall * -y
 
 # Maybe run the following R command
 sudo R CMD javareconf
+#sudo /usr/lib64/microsoft-r/3.3/lib64/R/bin/R CMD javareconf
 
 # Rstudio dependencies
 sudo yum install --downloadonly --downloaddir ./ psmisc -y
@@ -98,8 +99,12 @@ sudo yum localinstall * -y
 wget https://download2.rstudio.org/rstudio-server-rhel-1.0.143-x86_64.rpm
 sudo yum install --nogpgcheck rstudio-server-rhel-1.0.143-x86_64.rpm -y
 
+#sudo nano /etc/rstudio/rserver.conf
+#rsession-which-r=/usr/lib64/microsoft-r/3.3/lib64/R/bin/R
+#sudo rstudio-server restart
+
 ## Enable Swapping
-sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=2048
 sudo /sbin/mkswap /var/swap.1
 sudo chmod 600 /var/swap.1
 sudo /sbin/swapon /var/swap.1
