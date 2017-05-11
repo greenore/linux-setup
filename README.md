@@ -18,17 +18,17 @@ Log in to the AWS console (https://aws.amazon.com) and click on the EC2 icon und
 Search for “EC2” in the search bar. Click on “EC2” to start the EC2 wizard.
 
 #### Step 1: Choose an Amazon Maschine Image (AMI)
-![screen 1](/setup/img/step1.png "Screenshot 1")
+![screen 1](/img/step1.png "Screenshot 1")
 
 - Select the Ubuntu Server 16.04 image
 
 #### Step 2: Choose an Instance Type
-![screen 2](/setup/img/step2.png "Screenshot 2")
+![screen 2](/img/step2.png "Screenshot 2")
 
 - Select the free tier t2.micro instance. You're free to select a different one. This can also be changed later on when more capacity is needed. 
 
 #### Step 3: Configure Instance Details
-![screen 3](/setup/img/step3.png "Screenshot 3")
+![screen 3](/img/step3.png "Screenshot 3")
 
 - When using p2.xlarge, click on “Request Spot Instances”. Spot instances are significantly cheaper than normal instances. It is a way for Amazon to sell excess capacity at reduced prices.
 - (Optional) Click on “Enable CloudWatch Detailed Monitoring”. This will enable additional services like automatically shutting down an idle instance. You will be warned that additional charges may be incurred, which will go against your allotment. Consider it like buying insurance.
@@ -41,24 +41,24 @@ service ssh restart
 ```
 
 #### Step 4: Add Storage
-![screen 4](/setup/img/step4.png "Screenshot 4")
+![screen 4](/img/step4.png "Screenshot 4")
 
 - The default SSD storage of 8 GB is sometimes not enough when installing all the cecessary software. That is why 30GB is chosen.
 
 #### Step 5: Add Tags
-![screen 5](/setup/img/step5.png "Screenshot 5")
+![screen 5](/img/step5.png "Screenshot 5")
 
 - Nothing is changed/done here.
 
 #### Step 6: Configure Security Group
-![screen 6](/setup/img/step6.png "Screenshot 6")
+![screen 6](/img/step6.png "Screenshot 6")
 
 - This is an important step. If the necessary ports are not opened, it isn't possible to connect to your RStudio/Anaconda Server.
 - The following ports are opened: 80 (HTTP), 22 (SSH), HTTPS (443), RStudio Port (8787), Jupyter Port (8888).
 - It is allowed to connect to them from any IP. It would also be possible to restrict the IP Range. 
 
 #### Step 7: Review Instance Launch
-![screen 7](/setup/img/step7.png "Screenshot 7")
+![screen 7](/img/step7.png "Screenshot 7")
 - When you attempt to launch the instance it will ask if you have a keypair.
 - If you have not used SSH before and do not have a keypair, select “Create a new keypair”
 - Download the .pem file and store it in a safe place
@@ -74,13 +74,13 @@ You will need to convert the .pem key from AWS into a .ppk key in PuTTY Key Gene
 - Select Import Key under Conversions
 - Save as Private Key with RSA selected
 
-![putty key](/setup/img/image06.png "puTTY key generator")
+![putty key](/img/image06.png "puTTY key generator")
 
 Launch PuTTY and you will see the below screen.  
-![putty](/setup/img/image02.png "puTTY")
+![putty](/img/image02.png "puTTY")
 
 Navigate to SSH > Auth, browse to add the .ppk file and Open
-![putty aut](/setup/img/image00.png "puTTY auth")
+![putty aut](/img/image00.png "puTTY auth")
 
 Login as user ubuntu
 
