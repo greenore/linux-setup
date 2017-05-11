@@ -91,9 +91,9 @@ wget ftp://rpmfind.net/linux/epel/7/x86_64/g/geos-devel-3.4.2-2.el7.x86_64.rpm
 wget ftp://rpmfind.net/linux/epel/7/x86_64/g/geos-3.4.2-2.el7.x86_64.rpm
 sudo yum localinstall * -y
 
-# HDF5
-sudo yum install --downloadonly --downloaddir ./ hdf5-devel -y
-sudo yum localinstall * -y
+# PIP
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+sudo python get-pip.py
 
 # Rstudio dependencies
 sudo yum install --downloadonly --downloaddir ./ psmisc -y
