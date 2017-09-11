@@ -3,6 +3,8 @@
 # System 
 #-------
 # Add repository
+wget --no-check-certificate -O - https://debian.neo4j.org/neotechnology.gpg.key | apt-key add -
+echo 'deb https://debian.neo4j.org/repo stable/' | sudo tee /etc/apt/sources.list.d/neo4j.list
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 
 # Upgrade system
@@ -31,10 +33,7 @@ sudo apt install git -y
 
 # Neo4J
 #---------------
-#sudo apt-get install gdebi-core -y
-#cd ..
-#wget https://download2.rstudio.org/rstudio-server-1.0.136-amd64.deb
-#sudo gdebi rstudio-server-1.0.136-amd64.deb
+sudo apt install neo4j -y
 
 # Cleanup
 #--------
