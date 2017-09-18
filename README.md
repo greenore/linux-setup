@@ -103,7 +103,7 @@ ssh -i <your_ssh_keyfile> ubuntu@<your_AWS_public_DNS_name_or_IP_address>
 ## Install RStudio Server
 Download and run the bash script 
 ```bash
-wget https://raw.githubusercontent.com/greenore/deep-learning-project/master/setup/setup_rstudio.sh
+wget https://cdn.rawgit.com/greenore/linux-setup/7d25ec0c/setup_rstudio.sh
 chmod +x setup_rstudio.sh
 sudo ./setup_rstudio.sh
 ```
