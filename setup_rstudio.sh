@@ -48,6 +48,19 @@ sudo apt install default-jdk -y
 ## Git
 sudo apt install git -y
 
+## ODBC
+# Install the unixODBC library
+sudo apt install unixodbc unixodbc-dev -y
+
+# SQL Server ODBC Drivers (Free TDS)
+sudo apt install tdsodbc -y
+  
+# PostgreSQL ODBC ODBC Drivers
+sudo apt install odbc-postgresql -y
+
+# SQLite ODBC Drivers
+sudo apt install libsqliteodbc -y
+
 # Install MRO
 # mkdir -p downloads
 # cd downloads
