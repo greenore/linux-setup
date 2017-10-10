@@ -88,5 +88,5 @@ sudo apt clean -y
 # RStudio Server
 #---------------
 sudo apt install gdebi-core -y
-wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-1.1.364-amd64.deb
-sudo gdebi rstudio-server-1.1.359-amd64.deb
+wget https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-server-pro-1.1.383-amd64.deb
+sudo gdebi rstudio-server-pro-1.1.383-amd64.deb
