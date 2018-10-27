@@ -1,3 +1,18 @@
+# SOFTWARE
+#---------
+# Gimp
+# Firefox
+# Chrome
+# Gparted
+# Inkscaped
+# Menueditor
+# VLC
+# RStudio
+# Brackets
+# VSCode
+# WPS
+# Openshot
+
 #!/bin/bash
 
 # Bugs
