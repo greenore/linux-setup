@@ -30,28 +30,28 @@
 
 # System 
 #-------
-# Add apt-fast
+# Add apt
 sudo add-apt-repository ppa:saiarcot895/myppa
 sudo apt-get update
-sudo apt-get install apt-fast
+sudo apt-get install apt
 
 # Upgrade system
-sudo apt-fast update
-sudo apt-fast upgrade
-sudo apt-fast dist-upgrade
+sudo apt update
+sudo apt upgrade
+sudo apt dist-upgrade
 
 # Kernel upgrade (vivid is the 15.04 version...)
 sudo apt-get install --install-recommends linux-generic-lts-vivid
 
 # Install Elementary Tweaks
 sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
-sudo apt-fast update && sudo apt-fast install elementary-tweaks
+sudo apt update && sudo apt install elementary-tweaks
 
-# sudo apt-fast install elementary-wallpaper-collection
-sudo apt-fast install elementary-.*-theme elementary-.*-icons
+# sudo apt install elementary-wallpaper-collection
+sudo apt install elementary-.*-theme elementary-.*-icons
 
 ## Virtualbox Guest Additions (for optimal interaction)
-sudo apt-fast install virtualbox-guest-utils
+sudo apt install virtualbox-guest-utils
 usermod -a -G vboxsf tim
 usermod -a -G vboxsf rstudio-server
 mkdir /home/tim/R
@@ -86,35 +86,35 @@ sudo apt-get install openssh-server
 # Internet
 #---------
 # Install Browser
-sudo apt-fast install firefox
+sudo apt install firefox
 
 # Install flash plugin
-sudo apt-fast install adobe-flashplugin
+sudo apt install adobe-flashplugin
 
 # Install java for browser
-sudo apt-fast install icedtea-plugin
+sudo apt install icedtea-plugin
 
 # Enable H.264 support for Firefox:
 sudo add-apt-repository ppa:mc3man/trusty-media
-sudo apt-fast update
-sudo apt-fast install gstreamer0.10-ffmpeg
+sudo apt update
+sudo apt install gstreamer0.10-ffmpeg
 
 # Media
 #------
 # Install VLC Media Player
-sudo apt-fast install vlc
+sudo apt install vlc
 
 # Silverlight Installation
 sudo add-apt-repository ppa:pipelight/stable
-sudo apt-fast update && sudo apt-get install pipelight-multi
+sudo apt update && sudo apt-get install pipelight-multi
 sudo pipelight-plugin --enable silverlight
 
 # Audacity
-sudo apt-fast install audacity
+sudo apt install audacity
 
 # Install Videoeditor (Openshot)
 sudo add-apt-repository ppa:openshot.developers/ppa
-sudo apt-fast install openshot openshot-doc
+sudo apt install openshot openshot-doc
 
 # Office
 #-------
@@ -139,85 +139,85 @@ sudo mv de_DE /opt/kingsoft/wps-office/office6/dicts/
 sudo mv fr_FR /opt/kingsoft/wps-office/office6/dicts/
 
 # Installs Microsoft Core Fonts (Arial,Times New Roman and  many more)
-sudo apt-fast install ttf-mscorefonts-installer
+sudo apt install ttf-mscorefonts-installer
 
 ## Data Science
 #---------------
 # Curl Dependencies
-sudo apt-fast install libcurl4-openssl-dev 
+sudo apt install libcurl4-openssl-dev 
 
 # GEOS Dependencies
-sudo apt-fast install libgeos-dev
+sudo apt install libgeos-dev
 
 # RODBC Dependencies
-sudo apt-fast install libiodbc2 libiodbc2-dev
+sudo apt install libiodbc2 libiodbc2-dev
 
 # R Dependencies
-sudo apt-fast install libxft-dev
+sudo apt install libxft-dev
 
 # Install R-Base
 sudo add-apt-repository ppa:marutter/rrutter
-sudo apt-fast update
-sudo apt-fast install r-base
+sudo apt update
+sudo apt install r-base
 
 # RStudio Server
 sudo nano /etc/rstudio/rserver.conf
 rsession-which-r=/usr/lib64/RRO-3.2.0/R-3.2.0/bin/R
 
 # Install latex
-sudo apt-fast install texlive texlive-latex-extra
+sudo apt install texlive texlive-latex-extra
 
 # Brackets
 sudo add-apt-repository ppa:webupd8team/brackets
-sudo apt-fast update
-sudo apt-fast install brackets
+sudo apt update
+sudo apt install brackets
 
 # Atom
 sudo add-apt-repository ppa:webupd8team/atom
-sudo apt-fast update
-sudo apt-fast install atom
+sudo apt update
+sudo apt install atom
 
 ## System Settings
 #-----------------
 # Install menulibre
-sudo apt-fast install menulibre
+sudo apt install menulibre
 
 # Install gparted
-sudo apt-fast install gparted
+sudo apt install gparted
 
 # Install Multimedia Codecs and Enable DVD Playback
 sudo apt-add-repository ppa:mc3man/trusty-media
-sudo apt-fast update
-sudo apt-fast install ubuntu-restricted-extras ffmpeg gstreamer0.10-plugins-ugly libavcodec-extra-54 libvdpau-va-gl1 libmad0 mpg321 gstreamer1.0-libav
+sudo apt update
+sudo apt install ubuntu-restricted-extras ffmpeg gstreamer0.10-plugins-ugly libavcodec-extra-54 libvdpau-va-gl1 libmad0 mpg321 gstreamer1.0-libav
 
 # Install Plugin Flash Player and Pepper Flash
-sudo apt-fast install flashplugin-installer pepperflashplugin-nonfree
+sudo apt install flashplugin-installer pepperflashplugin-nonfree
 
 # Install JAVA
 sudo add-apt-repository -y ppa:webupd8team/java
-sudo apt-fast update
-sudo apt-fast install oracle-java9-installer
+sudo apt update
+sudo apt install oracle-java9-installer
 
 # Install Support for Archive Formats and Restricted Extras
-sudo apt-fast unace rar unrar p7zip-rar p7zip sharutils uudeview mpack arj cabextract lzip lunzip
+sudo apt unace rar unrar p7zip-rar p7zip sharutils uudeview mpack arj cabextract lzip lunzip
 
 # Install Graphic Editor
-sudo apt-fast install gimp inkscape
+sudo apt install gimp inkscape
 
 # Install Skype
-sudo apt-fast install skype
+sudo apt install skype
 
 #For Laptop: Install TLP for Improve Battery Life and Reduce Overheating
 sudo add-apt-repository ppa:linrunner/tlp
-sudo apt-fast update
-sudo apt-fast install tlp tlp-rdw
+sudo apt update
+sudo apt install tlp tlp-rdw
 sudo tlp start
 
 # Backup
 #-------
 sudo add-apt-repository ppa:deja-dup-team/testing
-sudo apt-fast update
-sudo apt-fast install deja-dup
+sudo apt update
+sudo apt install deja-dup
 
 # Adding Deja-dup support to Files
 # With Sudo Create dejadup-restore.contract in /usr/share/contractor
@@ -241,6 +241,6 @@ Gettext-Domain=deja-dup
 
 # Cleanup
 #--------
-sudo apt-fast autoremove
-sudo apt-fast autoclean
-sudo apt-fast clean
+sudo apt autoremove
+sudo apt autoclean
+sudo apt clean
