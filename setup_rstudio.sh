@@ -1,5 +1,27 @@
 #!/bin/bash
 
+# Add new user
+sudo adduser tih
+sudo adduser tih sudo
+
+# Copy ssh key
+sudo mkdir /home/tih/.ssh
+sudo cp /home/ubuntu/.ssh/authorized_keys \
+/home/tih/.ssh/authorized_keys
+sudo cp /home/ubuntu/.ssh/authorized_keys \
+/home/tih/.ssh/authorized_keys
+sudo chown tih -R /home/tih/.ssh
+sudo chmod 700 /home/tih/.ssh
+sudo chmod 600 /home/tih/.ssh/authorized_keys
+
+# Step 9: Enable Swapping (optional)
+# Because of the limited amount of RAM it might be necessary to enable swapping. This isn’t necessary the case when using bigger instances.
+
+sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=2048
+sudo /sbin/mkswap /var/swap.1
+sudo chmod 600 /var/swap.1
+sudo /sbin/swapon /var/swap.1
+
 # System 
 #-------
 # Install the packages necessary to add a new repository over HTTPS:
@@ -19,6 +41,7 @@ sudo apt install openssh-server libssl-dev libxml2-dev -y
 
 # Installs Microsoft Core Fonts (Arial,Times New Roman and  many more)
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
+sudo apt install ttf-mscorefonts-installer -yecho ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
 sudo apt install ttf-mscorefonts-installer -y
 
 ## Data Science
